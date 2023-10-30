@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap");
+:root {
+  --bg-color: hsl(225, 100%, 98%);
+  --border-color: hsl(226, 87%, 82%);
+  --component-color: hsl(224, 100%, 91%);
+  --main-color: hsl(226, 70%, 55%);
+  --black-color: hsl(226, 50%, 24%);
+  --white-color: hsl(210, 100%, 99%);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --shadow-box: 0 0.1rem 0.25rem;
+  --transition: all 0.3s ease-in-out;
+  --font-family: "Noto Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--black-color);
+  font-family: var(--font-family);
+  font-size: 62.5%;
+}
+
+section {
+  min-height: 100dvh;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 2rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 100;
+  background-color: yellowgreen;
+}
+.header img {
+  margin-right: auto;
+}
+.header img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+}
+.header img:nth-child(2) {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 60px;
+}
+.header .navbar a {
+  position: relative;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  font-weight: 500;
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+.header .navbar a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--white-color);
+}
+.header #dark_mode {
+  font-size: 2rem;
+  color: var(--white-color);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
