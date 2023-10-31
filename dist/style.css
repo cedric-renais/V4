@@ -35,23 +35,21 @@ body {
 
 section {
   min-height: 100dvh;
+  padding: 10rem 7% 2rem;
 }
 
 .header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
-  padding: 2rem 7%;
+  padding: 2rem 1.5%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   z-index: 100;
-  background-color: yellowgreen;
-}
-.header img {
-  margin-right: auto;
+  background-color: transparent;
 }
 .header img:nth-child(1) {
   position: absolute;
@@ -67,7 +65,7 @@ section {
 }
 .header .navbar a {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--white-color);
   font-weight: 500;
   margin-right: 2rem;
@@ -79,11 +77,158 @@ section {
   left: 0;
   bottom: -6px;
   width: 100%;
-  height: 0.2rem;
+  height: 0.1rem;
   background-color: var(--white-color);
 }
 .header #dark_mode {
   font-size: 2rem;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+.home_content {
+  max-width: 44rem;
+}
+.home_content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 0.5;
+}
+.home_content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.home_content .social_media {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.home_content .social_media .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+}
+.home_content .social_media .icon a {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  box-shadow: var(--shadow-box, --shadow-color);
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: var(--transition);
+}
+.home_content .social_media .icon a:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.home_content .social_media .icon span {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+.home .profession_container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 50vw;
+  height: 100dvh;
+  overflow: hidden;
+  pointer-events: none;
+}
+.home .profession_container .profession_box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100dvh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: professionRotate 10s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+.home .profession_container .profession_box .profession {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: rotate(calc(90deg * var(--i)));
+  transform-origin: 25vw;
+  background-color: var(--bg-color);
+  padding: 0.9rem 0;
+}
+.home .profession_container .profession_box .profession i {
+  font-size: 3.8rem;
+  color: var(--main-color);
+}
+.home .profession_container .profession_box .profession h2 {
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: 600;
+}
+.home .profession_container .profession_box .profession:nth-child(1) i {
+  margin-right: 15px;
+}
+.home .profession_container .profession_box .profession:nth-child(2), .home .profession_container .profession_box .profession:nth-child(4) {
+  padding-bottom: 25px;
+}
+.home .profession_container .profession_box .profession:nth-child(2) i, .home .profession_container .profession_box .profession:nth-child(4) i {
+  margin-right: 40px;
+}
+
+@keyframes professionRotate {
+  0%, 20% {
+    transform: rotate(0deg);
+  }
+  25%, 45% {
+    transform: rotate(-90deg);
+  }
+  50%, 70% {
+    transform: rotate(-180deg);
+  }
+  75%, 95% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.cercle {
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  right: 0rem;
+}
+
+.overlay img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.overlay img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.home_img img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 60dvh;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
