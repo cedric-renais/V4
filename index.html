@@ -8,11 +8,7 @@
         name="description"
         content="Cédric Renais UX/UI Designer & Développeur web"
       />
-      <link
-        rel="shortcut icon"
-        href="./source/images/favicon.svg"
-        type="image/x-icon"
-      />
+      <link rel="shortcut icon" href="./src/img/logo.svg" type="image/x-icon" />
       <link
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"
@@ -26,8 +22,8 @@
     <!-- Header -->
     <!------------>
     <header class="header">
-      <img src="./source/images/polygon_top.svg" alt="Un polygon bleu" />
-      <img src="./source/images/logo.svg" alt="Mon logo" />
+      <img src="./src/img/polygon_top.svg" alt="Un polygon bleu" />
+      <img src="./src/img/logo.svg" alt="Mon logo" />
       <nav class="navbar">
         <a href="#home" class="active">accueil</a>
         <a href="#about">qui suis-je ?</a>
@@ -115,16 +111,16 @@
         </div>
         <div class="overlay">
           <img
-            src="./source/images/overlay_top.svg"
+            src="./src/img/overlay_top.svg"
             alt="un pylogon dans le coin en haut à droite"
           />
           <img
-            src="./source/images/overlay_bottom.svg"
+            src="./src/img/overlay_bottom.svg"
             alt="un pylogon dans le coin en bas à droite"
           />
         </div>
         <div class="home_img">
-          <img src="./source/images/home.webp" alt="Une photo portrait" />
+          <img src="./src/img/home.webp" alt="Une photo portrait" />
         </div>
       </div>
     </section>
@@ -136,7 +132,7 @@
       <!-- Image -->
       <div class="about_img">
         <img
-          src="./source/images/about.webp"
+          src="./src/img/about.webp"
           alt="Une photo portrait dans un polygon"
         />
       </div>
@@ -171,10 +167,7 @@
       <h2>UX/UI Design</h2>
       <div class="portfolio_container">
         <div class="portfolio_box">
-          <img
-            src="./source/images/playline.webp"
-            alt="Mockup du projet Playline"
-          />
+          <img src="./src/img/playline.webp" alt="Mockup du projet Playline" />
           <div class="portfolio_layer">
             <h3>Playline</h3>
             <h4>Application mobile</h4>
@@ -182,10 +175,7 @@
           </div>
         </div>
         <div class="portfolio_box">
-          <img
-            src="./source/images/actiquit.webp"
-            alt="Mockup du projet Actiquit"
-          />
+          <img src="./src/img/actiquit.webp" alt="Mockup du projet Actiquit" />
           <div class="portfolio_layer">
             <h3>Actiquit</h3>
             <h4>Application mobile</h4>
@@ -193,10 +183,7 @@
           </div>
         </div>
         <div class="portfolio_box">
-          <img
-            src="./source/images/vazydata.webp"
-            alt="Mockup du projet Vazydata"
-          />
+          <img src="./src/img/vazydata.webp" alt="Mockup du projet Vazydata" />
           <div class="portfolio_layer">
             <h3>Vazydata</h3>
             <h4>Outil de Data visualisation</h4>
@@ -213,10 +200,7 @@
       <h2>Développement Web</h2>
       <div class="portfolio_container">
         <div class="portfolio_box">
-          <img
-            src="./source/images/ohmyfood.webp"
-            alt="Mockup du projet Ohmyfood"
-          />
+          <img src="./src/img/ohmyfood.webp" alt="Mockup du projet Ohmyfood" />
           <div class="portfolio_layer">
             <h3>Ohmyfood</h3>
             <h4>HTML & SCSS<br />(Totalement responsive sans breakpoint)</h4>
@@ -224,10 +208,7 @@
           </div>
         </div>
         <div class="portfolio_box">
-          <img
-            src="./source/images/sushiman.webp"
-            alt="Mockup du projet Sushiman"
-          />
+          <img src="./src/img/sushiman.webp" alt="Mockup du projet Sushiman" />
           <div class="portfolio_layer">
             <h3>Sushiman</h3>
             <h4>HTML, CSS & JAVASCRIPT<br />(AOS pour les animations)</h4>
@@ -235,10 +216,7 @@
           </div>
         </div>
         <div class="portfolio_box">
-          <img
-            src="./source/images/hoobank.webp"
-            alt="Mockup du projet Hoobank"
-          />
+          <img src="./src/img/hoobank.webp" alt="Mockup du projet Hoobank" />
           <div class="portfolio_layer">
             <h3>Hoobank</h3>
             <h4>REACT & TAILWIND</h4>
@@ -247,7 +225,62 @@
         </div>
       </div>
     </section>
+
+    <!--------------------->
+    <!-- Section Contact -->
+    <!--------------------->
+    <section class="contact" id="contact">
+      <h2>Contactez moi</h2>
+
+      <div class="contact_container">
+        <img
+          src="./src/img/contact.webp"
+          alt="Une photo pointant du doigt le formulaire de contact"
+        />
+        <form action="#">
+          <div class="input_box">
+            <input
+              type="text"
+              id="name"
+              placeholder="Nom"
+              aria-label="Votre nom"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input_box">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              aria-label="Votre email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input_box">
+            <input
+              type="text"
+              id="subject"
+              placeholder="Objet"
+              aria-label="Objet"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input_box">
+            <textarea
+              id="message"
+              placeholder="Message"
+              aria-label="Message"
+              autocomplete="off"
+            ></textarea>
+          </div>
+          <div class="input_box">
+            <input class="button" type="submit" value="Envoyer" />
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- JS -->
-    <script src="./javascript/index.js"></script>
+    <script src="./dist/index.js"></script>
   </body>
 </html>

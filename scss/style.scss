@@ -202,7 +202,7 @@ section {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 50vw;
+    width: 50dvw;
     height: 100dvh;
     overflow: hidden;
     pointer-events: none;
@@ -211,7 +211,7 @@ section {
       position: absolute;
       top: 0;
       right: 0;
-      width: 50vw;
+      width: 50dvw;
       height: 100dvh;
       border-radius: 50%;
       display: flex;
@@ -227,7 +227,7 @@ section {
         align-items: center;
         flex-direction: column;
         transform: rotate(calc(360deg / 4 * var(--i)));
-        transform-origin: 25vw;
+        transform-origin: 25dvw;
         background-color: var(--bg-color);
         padding: 0.9rem 0;
 
@@ -327,7 +327,7 @@ section {
 
   .about_img {
     img {
-      width: 30vw;
+      width: 30dvw;
     }
   }
 
@@ -398,7 +398,7 @@ section {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 0;
         border-radius: 2rem;
         background: linear-gradient(rgba(0, 0, 0, 0.1), var(--black-color));
         color: var(--white-color);
@@ -444,6 +444,81 @@ section {
 
       &:hover .portfolio_layer {
         opacity: 1;
+        height: 100%;
+        transform-origin: bottom;
+      }
+    }
+  }
+}
+
+//*****************//
+// Section Contact //
+//*****************//
+.contact {
+  h2 {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .contact_container {
+    display: flex;
+
+    img {
+      width: 35dvw;
+    }
+
+    form {
+      max-width: 70rem;
+      width: 50%;
+      margin: 1rem auto;
+      text-align: center;
+      margin-bottom: 3rem;
+      border-radius: 0.8rem;
+      text-align: center;
+
+      .input_box {
+        display: flex;
+        justify-content: center;
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.6rem;
+          color: var(--black-color);
+          background-color: var(--bg-color);
+          border-radius: 0.8rem;
+          margin: 0.7rem 0;
+          box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+          resize: none;
+        }
+
+        textarea {
+          height: 20dvh;
+        }
+
+        .button {
+          width: 20%;
+          padding: 1rem 2rem;
+          font-size: 1.5rem;
+          color: var(--white-color);
+          background-color: var(--main-color);
+          text-transform: uppercase;
+          font-weight: 500;
+          border-radius: 0.5rem;
+          margin-top: 1.5rem;
+          box-shadow: 0 0.1rem 0.1rem var(--shadow-color);
+          border: 0.2rem solid transparent;
+          transition: var(--transition);
+          cursor: pointer;
+
+          &:hover {
+            border: 0.2rem solid var(--main-color);
+            color: var(--main-color);
+            background-color: var(--bg-color);
+          }
+        }
       }
     }
   }
