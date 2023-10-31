@@ -14,7 +14,6 @@
   --black-color: hsl(226, 50%, 24%);
   --white-color: hsl(210, 100%, 99%);
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --shadow-box: 0 0.1rem 0.25rem;
   --transition: all 0.3s ease-in-out;
   --font-family: 'Noto Sans', sans-serif;
 }
@@ -66,6 +65,31 @@ section {
   justify-content: flex-end;
   z-index: 100;
   background-color: transparent;
+  transition: var(--transition);
+
+  // Fixed Navbar
+  &.fixed {
+    background-color: var(--bg-color);
+    box-shadow: 0 0.1rem 0.1rem var(--shadow-color);
+
+    .navbar a {
+      color: var(--black-color);
+
+      &:hover {
+        color: var(--main-color);
+        border-bottom: 0.15rem solid var(--main-color);
+      }
+
+      &.active {
+        color: var(--main-color);
+        border-bottom: 0.15rem solid var(--main-color);
+      }
+    }
+
+    #dark_mode {
+      color: var(--black-color);
+    }
+  }
 
   // Images
   & img {
@@ -92,15 +116,15 @@ section {
     font-weight: 500;
     margin-right: 2rem;
     text-transform: uppercase;
+    border-bottom: 0.15rem solid transparent;
+    transition: var(--transition);
 
-    &.active::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 100%;
-      height: 0.1rem;
-      background-color: var(--white-color);
+    &:hover {
+      border-bottom: 0.15rem solid var(--white-color);
+    }
+
+    &.active {
+      border-bottom: 0.15rem solid var(--white-color);
     }
   }
 
@@ -122,13 +146,13 @@ section {
   &_content {
     max-width: 44rem;
 
-    & h3 {
+    h3 {
       font-size: 3.2rem;
       font-weight: 700;
       line-height: 0.5;
     }
 
-    & h1 {
+    h1 {
       font-size: 5.6rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
@@ -146,7 +170,7 @@ section {
         justify-content: center;
         margin-right: 3rem;
 
-        & a {
+        a {
           display: grid;
           place-items: center;
           width: 4rem;
@@ -165,7 +189,7 @@ section {
           }
         }
 
-        & span {
+        span {
           margin-top: 0.5rem;
           font-size: 0.8rem;
         }
@@ -289,5 +313,44 @@ section {
     right: 0;
     max-width: 60dvh;
     width: 100%;
+  }
+}
+
+//***************//
+// Section About //
+//***************//
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  .about_img {
+    img {
+      width: 30vw;
+    }
+  }
+
+  .about_content {
+    h2 {
+      font-size: 4rem;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: var(--main-color);
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin: 2rem 0 3rem;
+
+      em {
+        font-style: normal;
+        color: var(--main-color);
+      }
+    }
   }
 }
